@@ -50,7 +50,7 @@ authorize_url = etrade_info['authorize_token_url'] + '?' + 'key=' + \
 print "*** point your browser at", authorize_url
 oauth_verifier = raw_input("*** enter code from browser: ")
     
-# stage three: fetch the access token (happens behind the scenes) and create a session
+# stage three: fetch the access token
 access_token, access_token_secret = service.get_access_token(request_token, request_token_secret,
                                                              params={'oauth_verifier': oauth_verifier})
 
